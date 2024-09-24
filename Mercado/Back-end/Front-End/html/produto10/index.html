@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste5</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <h1 id="header-tittle">MistyBox</h1>
+        <img src="../assets/cart.webp" alt="Carrinho" onclick="openPageCart()">
+    </header>
+    
+    <section id="section-product-page">
+        <div class="img-product-page">
+            <img src="https://www.shutterstock.com/image-vector/example-stamp-red-rubber-on-260nw-2420575109.jpg" alt="Teste5">
+        </div>
+        <div>
+            <h2 id="new-product">Teste5</h2>
+            <p>teste5</p>
+        </div>
+        <div class="side-div-buy">
+            <h2 id="price">520,00</h2>
+            <h2 id="status-storage">Em estoque</h2>
+            <h2 id="compra-internacional">Compra internacional</h2>
+            <div class="button-container">
+                <button class="button button-1" onclick="adicionarProduto()">Adicionar ao Carrinho</button>
+                <button class="button button-2" onclick="BuyNow()">Comprar Agora</button>
+            </div>
+        </div>
+    </section>
+
+    <h2>Carrinho de Compras</h2>
+    <div id="cart"></div>
+
+    <!-- Modal -->
+    <div id="modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <p>Produto adicionado ao carrinho. O que você deseja fazer?</p>
+            <button onclick="continuarNavegando()">Continuar Navegando</button>
+            <button onclick="openPageCart()">Ir para o Carrinho</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+            

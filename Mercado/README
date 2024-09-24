@@ -1,0 +1,103 @@
+# Mercado Místico
+O Mercado Místico é uma aplicação desenvolvida como tarefa estudantil da temática de loja, na qual utilizamos API's para gerenciar produtos, compras e usuários.
+ 
+## Instruções de Instalação e Execução
+1 - Abra o repositório do github
+2 - Baixe e extraia o arquivo mercado.zip
+3 - Entre na pasta back-end dentro da pasta mercado pelo explorador de arquivo
+4 - Clique com o botão direito do mouse na tela e selecione "Open Git Bash Here" ou "abrir no terminal"
+5 - Digite cd ..
+6 - Digite npm start
+ 
+(Caso não funcione, volte para a pasta back-end usando o comando "cd ." e digite os seguintes comandos de instalação: npm i express nodemon dotenv mysql2 cors)
+ 
+Volte para a pasta mercado e repita o passo 6
+ 
+## Dependências:
+ 
+body-parser: "^1.20.2"
+cors: "^2.8.5"
+dotenv: "^16.4.5"
+express: "^4.19.2"
+multer: "^1.4.5-lts.1"
+mysql2: "^3.11.0"
+nodemon: "^3.1.4"}
+ 
+## Rotas da API
+ 
+### Usuários
+1 - Cadastrar Usuário
+Método: POST
+Rota: /usuario/cadastrar
+Dados Esperados: nome completo de usuário, email, senha, cpf, telefone e status do usuário (admin ou não admin)
+Respostas:
+400: "Erro ao cadastrar usuário"
+201: "Usuário cadastrado com sucesso"
+ 
+2 - Login
+Método: POST
+Rota: /usuario/login
+Dados Esperados: email e senha
+Respostas:
+500: "Erro no servidor"
+400: "Usuário não encontrado ou senha incorreta"
+200: "Login realizado com sucesso"
+ 
+3 - Verificar se é admin
+Método: GET
+Rota: /usuario/info
+Dado Procurado: status do usuário
+Resposta:
+401: "Não autenticado"
+200: Sem mensagem (sucesso)
+ 
+4 - Listar os usuários cadastrados
+Método: GET
+Rota: /usuario/listar
+Dado Procurado: Tabela Usuários do Banco de Dados
+Respostas:
+200: "Sucesso"
+400: "Sem sucesso"
+ 
+5 - Editar um usuário
+Método: PUT
+Rota: /usuario/editar/:id
+Dado Procurado: Usuário com o ID específico
+Respostas:
+200: "Sucesso"
+400: "Sem sucesso"
+ 
+6 - Deletar um usuário
+Método: DELETE
+Rota: /usuario/deletar/:id
+Dado Procurado: Usuário com o ID específico
+Respostas:
+200: "Sucesso"
+400: "Sem sucesso"
+ 
+### Produtos 
+1 - Adicionar Produto
+Método: POST
+Rota: /produtos/adicionar
+Dado Procurado: Dados do Produto (nome, preço, estoque, imagem e descrição)
+Respostas:
+400: "Todos os campos são obrigatórios"
+500: "Erro ao adicionar produto"
+201: "Produto adicionado com sucesso"
+ 
+2 - Pesquisar Produto
+Método: GET
+Rota: /produtos/:id
+Dado Procurado: Produto com o ID específico
+Respostas:
+500: "Erro no servidor"
+404: "Produto não encontrado"
+200: Sem mensagem (sucesso)
+ 
+3 - Obter Produto
+Método: GET
+Rota: /produtos
+Dado Procurado: Tabela de Produtos do Banco de Dados
+Respostas: 
+500: "Erro ao obter produtos"
+200: Sem mensagem (sucesso)

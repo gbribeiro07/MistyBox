@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho de Compras</title>
+    <link rel="stylesheet" href="/Front-End/css/cart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <h1 id="header-tittle" onclick="redirecionarParaPagina('Mercado místico.html')">MistyBox</h1>
+    </header>
+    <section>
+        <h1 id="tittle-cart">Carrinho de compras</h1>
+        <div class="container" id="cart-container">
+            <div id="productItem">
+                <div class="grid-container">
+                    <div class="productCart" id="div-product1">
+                        <img src="/Front-End/assets/dragonEGG.png" alt="Produto 1">
+                        <div class="productName">MistyBox Magic Dragon Eggs premium</div>
+                        <div>
+                            <p class="productPrice">R$ 6.830,00</p>
+                            <input type="number" class="product-qtde-input" id="product-qtde-input-1" value="1" min="1" max="20">
+                            <span><i class="fas fa-trash-alt" id="lixeira" onclick="clearProduct1()"></i></span>
+                        </div>
+                    </div>
+                    <div class="productCart" id="div-product2">
+                        <img src="/Front-End/assets/aliensGun.png" alt="Produto 2">
+                        <div class="productName">MistyBox Alien’s Guns</div>
+                        <div>
+                            <p class="productPrice">R$ 3.500,00</p>
+                            <input type="number" class="product-qtde-input" id="product-qtde-input-2" value="1" min="1" max="20">
+                            <span><i class="fas fa-trash-alt" id="lixeira" onclick="clearProduct2()"></i></span>
+                        </div>
+                    </div>
+                    <div class="productCart" id="div-product3">
+                        <img src="/Front-End/assets/magic-swords.png" alt="Produto 3">
+                        <div class="productName">MistyBox Legendary Swords</div>
+                        <div>
+                            <p class="productPrice">R$20.400,00</p>
+                            <input type="number" class="product-qtde-input" id="product-qtde-input-3" value="1" min="1" max="20">
+                            <span><i class="fas fa-trash-alt" id="lixeira" onclick="clearProduct3()"></i></span>
+                        </div>
+                    </div>
+                    <div class="productCart" id="div-product4">
+                        <img src="/Front-End/assets/box.png" alt="Produto 4">
+                        <div class="productName">MistyBox Classic</div>
+                        <div>
+                            <p class="productPrice">R$3.000,00</p>
+                            <input type="number" class="product-qtde-input" id="product-qtde-input-4" value="1" min="1" max="20">
+                            <span><i class="fas fa-trash-alt" id="lixeira" onclick="clearProduct4()"></i></span>
+                        </div>
+                    </div>
+                    <div class="productCart" id="div-product5">
+                        <img src="/Front-End/assets/portableBrain.png" alt="Produto 5">
+                        <div class="productName">MistyBox Portraits Power Brains</div>
+                        <div>
+                            <p class="productPrice">R$ 9.600,00</p>
+                            <input type="number" class="product-qtde-input" id="product-qtde-input-5" value="1" min="1" max="20">
+                            <span><i class="fas fa-trash-alt" id="lixeira" onclick="clearProduct5()"></i></span>
+                        </div>
+                    </div>
+                    <div class="productCart" id="div-product6">
+                        <img src="/Front-End/assets/TeleportMachine.png" alt="Produto 6">
+                        <div class="productName">MistyBox Teleport & Move Machines</div>
+                        <div>
+                            <p class="productPrice">R$ 14.900,00</p>
+                            <input type="number" class="product-qtde-input" id="product-qtde-input-6" value="1" min="1" max="20">
+                            <span><i class="fas fa-trash-alt" id="lixeira" onclick="clearProduct6()"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="totalContainer">
+                    <p>Total: R$ <span id="totalAmount">0,00</span></p>
+                </div>
+
+                <div>
+                    <button class="clear-cart-button" onclick="clearCart()"><i class="fas fa-trash-alt"></i> Limpar Carrinho</button>
+                    <button class="checkout-button" onclick="redirecionarParaPagina('checkout.html')"><i class="fas fa-shopping-cart"></i> Finalizar Compra</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="/Back-end/src/carrinho.js"></script>
+    <script src="/Back-end/src/script.js"></script>
+</body>
+</html>
